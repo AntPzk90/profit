@@ -34,11 +34,13 @@ $('.header__logged-icon-img').click(function () {
 $('.present__form-filter-mobile-btn').click(function() {
   $('.present__form').addClass('present__form--active');
   $(this).css('display', 'none');
+  $('.present__form-wrapper').css('padding-bottom', '0');
 });
 // закрытие фильтров на мобильной версии
 $('.present__form-btn-close').click(function() {
   if ($('.present__form').hasClass('present__form--active')){
     $('.present__form').removeClass('present__form--active');
     $('.present__form-filter-mobile-btn').removeAttr('style');
+    $('.present__form-wrapper').removeAttr('style');
   }
 });
