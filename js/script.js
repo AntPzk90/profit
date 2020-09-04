@@ -30,7 +30,7 @@ $('.header__mobile-btn').click(function () {
 // открывание меню залогиненого юзера
 $('.header__logged-icon-img').click(function () {
   $('.header__logged-name').slideToggle();
-  $('.header__logged-list').slideToggle(500);
+  $('.header__logged-list').slideToggle();
   $('.header__logged-icon').css('display', 'block');
 });
 
