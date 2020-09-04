@@ -44,3 +44,21 @@ $('.present__form-btn-close').click(function() {
     $('.present__form-wrapper').removeAttr('style');
   }
 });
+// slick slider на главной странице
+$('.present__slider-wrapper').slick({
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  infinite: true,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 560,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+      }
+    }
+  ]
+});
