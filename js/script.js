@@ -3,6 +3,9 @@
 $(document).ready(function() {
   $('.form__select').select2({
   });
+  $('.pagination__select').select2({
+    minimumResultsForSearch: -1
+  });
 });
 // === главная страница === //
 // открывание мобильного меню
