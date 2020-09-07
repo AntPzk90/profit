@@ -1,5 +1,6 @@
 // === подключение библиотек === //
 //преобразуем селекты библиотека https://select2.org/
+let viewport = $(document).width();
 $(document).ready(function() {
   $('.form__select').select2({
   });
@@ -11,11 +12,11 @@ $(document).ready(function() {
 // открывание мобильного меню
 $('.header__mobile-btn').click(function () {
   $('.header__navigation').slideToggle();
-  $('.header__user-list').slideToggle();
-  $('.header__user-list').css('display', 'flex');
-  $('.header__user').css('order', '1')
-  // $('.header__settings').slideToggle();
-  // $('.header__user-block').slideToggle();
+  if (viewport < 768) {
+    $('.header__user-list').slideToggle();
+    $('.header__user-list').css('display', 'flex');
+    $('.header__user').css('order', '1')
+  }
   if ($(this).hasClass('header__mobile-btn--gamburger')) {
     $(this).removeClass('header__mobile-btn--gamburger');
     $(this).addClass('header__mobile-btn--close')
@@ -23,8 +24,18 @@ $('.header__mobile-btn').click(function () {
     $(this).removeClass('header__mobile-btn--close');
     $(this).addClass('header__mobile-btn--gamburger');
     $('.header__user').removeAttr('style');
-    $('.header__user-list').slideUp();
-    $('.header__user-list').removeAttr('style');
+    if (viewport < 768) {
+      $('.header__user-list').slideUp();
+    }
+  }
+});
+// открывание подменю в пункте услуги
+$('.header__sub-list-btn').click(function() {
+  $(this).toggleClass('header__sub-list-btn--active');
+  if ($(this).hasClass('header__sub-list-btn--active')) {
+    $('.header__sub-list').slideDown();
+  } else {
+    $('.header__sub-list').slideUp();
   }
 });
 // открывание меню залогиненого юзера
@@ -50,20 +61,38 @@ $('.present__form-btn-close').click(function() {
   }
 });
 // slick slider на главной странице
-$('.present__slider-wrapper').slick({
-  slidesToShow: 2,
-  slidesToScroll: 2,
-  infinite: true,
-  dots: true,
-  responsive: [
-    {
-      breakpoint: 560,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: false,
-      }
-    }
-  ]
-});
+
+if (viewport < 1200) {
+  $('.present__slider-wrapper').slick({
+    responsive: [
+      {
+        breakpoint: 560,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+          rows: 1,
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true,
+          arrows: false,
+          rows: 1
+        }
+      },
+    ]
+  });
+} else {
+  $('.present__slider-wrapper').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    rows: 2
+  })
+}

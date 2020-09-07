@@ -19,7 +19,7 @@
       </a>
       <nav class="header__navigation">
         <ul class="header__navigation-list">
-          <li class="header__navigation-list-item">
+          <li class="header__navigation-list-item header__navigation-list-item--active">
             <a href="#" class="header__navigation-link">
               Грузы
             </a>
@@ -29,14 +29,80 @@
               Грузовладельци
             </a>
           </li>
-          <li class="header__navigation-list-item">
+          <li class="header__navigation-list-item header__navigation-list-item--services">
             <a href="#" class="header__navigation-link">
               Услуги
             </a>
+            <button type="button" class="header__sub-list-btn"></button>
             <ul class="header__sub-list">
               <li class="header__sub-list-item">
                 <a href="#" class="header__sub-list-link">
-
+                  Партнёры
+                </a>
+              </li>
+              <li class="header__sub-list-item">
+                <a href="#" class="header__sub-list-link">
+                  Бухгалтерия, ЭДО
+                </a>
+              </li>
+              <li class="header__sub-list-item">
+                <a href="#" class="header__sub-list-link">
+                  Кредиты, лизинг
+                </a>
+              </li>
+              <li class="header__sub-list-item">
+                <a href="#" class="header__sub-list-link">
+                  Для банков
+                </a>
+              </li>
+              <li class="header__sub-list-item">
+                <a href="#" class="header__sub-list-link">
+                  Страховые компании
+                </a>
+              </li>
+              <li class="header__sub-list-item">
+                <a href="#" class="header__sub-list-link">
+                  Автосервисы
+                </a>
+              </li>
+              <li class="header__sub-list-item">
+                <a href="#" class="header__sub-list-link">
+                  Запчасти
+                </a>
+              </li>
+              <li class="header__sub-list-item">
+                <a href="#" class="header__sub-list-link">
+                  Покупка и продажа авто
+                </a>
+              </li>
+              <li class="header__sub-list-item">
+                <a href="#" class="header__sub-list-link">
+                  Топливные компании
+                </a>
+              </li>
+              <li class="header__sub-list-item">
+                <a href="#" class="header__sub-list-link">
+                  Аналитика
+                </a>
+              </li>
+              <li class="header__sub-list-item">
+                <a href="#" class="header__sub-list-link">
+                  Контроль и учёт зап. частей
+                </a>
+              </li>
+              <li class="header__sub-list-item">
+                <a href="#" class="header__sub-list-link">
+                  Инвестиции
+                </a>
+              </li>
+              <li class="header__sub-list-item">
+                <a href="#" class="header__sub-list-link">
+                  Факторинг
+                </a>
+              </li>
+              <li class="header__sub-list-item">
+                <a href="#" class="header__sub-list-link">
+                  Мониторинг транспорта по GPS
                 </a>
               </li>
             </ul>
@@ -59,7 +125,7 @@
         </ul>
       </nav>
       <!-- модификатор залогиненого пользователя header__user--logged -->
-      <div class="header__user header__user--logged">
+      <div class="header__user">
         <ul class="header__user-list">
           <li class="header__user-list-item">
             <a class="header__user-link btn btn--transparent">
@@ -109,30 +175,24 @@
         <div class="present__slider-wrapper slider">
           <div class="present__slide slider__item">
             <b class="slider__item-title">Грузовладельцев</b>
-            <span class="slider__slogan">Зарегестрировано и проверене</span>
+            <span class="slider__slogan">Зарегестрировано и проверено</span>
             <span class="slider__count">29 431</span>
           </div>
           <div class="present__slide slider__item">
             <b class="slider__item-title">Грузов</b>
-            <span class="slider__slogan">проверене</span>
+            <span class="slider__slogan">проверено</span>
             <span class="slider__count">232 768</span>
           </div>
           <div class="present__slide slider__item">
             <b class="slider__item-title">Перевозчиков</b>
-            <span class="slider__slogan">Зарегестрировано и проверене</span>
+            <span class="slider__slogan">Зарегестрировано и проверено</span>
             <span class="slider__count slider__count--blue">5 247</span>
           </div>
           <div class="present__slide slider__item">
             <b class="slider__item-title">Автомобилей</b>
-            <span class="slider__slogan">Зарегестрировано и проверене</span>
+            <span class="slider__slogan">Зарегестрировано и проверено</span>
             <span class="slider__count slider__count--blue">17 867</span>
           </div>
-          <!-- <div class="slider__switch">
-            <button class="slider__btn"></button>
-            <button class="slider__btn"></button>
-            <button class="slider__btn"></button>
-            <button class="slider__btn"></button>
-          </div> -->
         </div>
         <div class="present__form-wrapper">
           <h1 class="present__title big-title">
@@ -146,8 +206,8 @@
           <form class="present__form form">
             <b class="present__form-mobile-title">Параметры поиска</b>
             <b class="present__form-title">Поиск Грузов</b>
-            <fieldset class="form__fieldset present__fieldset present__fieldset--location">
-              <legend class="form__legend vis-hidd">Локация</legend>
+            <div class="form__fieldset present__fieldset present__fieldset--location">
+              <h5 class="form__legend vis-hidd">Локация</h5>
               <div class="present__form-wrapper-inner present__form-wrapper-inner--from">
                 <input type="text" class="present__text-input form__text-input" placeholder="Откуда">
                 <select class="present__form-select form__select" id="sel">
@@ -186,9 +246,9 @@
                   </option>
                 </select>
               </div>
-            </fieldset>
-            <fieldset class="form__fieldset present__fieldset present__fieldset--weight">
-              <legend class="form__legend vis-hidd">Вес Объём груза</legend>
+            </div>
+            <div class="form__fieldset present__fieldset present__fieldset--weight">
+              <h5 class="form__legend vis-hidd">Вес Объём груза</h5>
               <div class="present__form-wrapper-inner present__form-wrapper-inner--from">
                 <input type="text" class="present__text-input form__text-input" placeholder="Вес от, т">
                 <input type="text" class="present__text-input form__text-input" placeholder="до">
@@ -197,9 +257,9 @@
                 <input type="text" class="present__text-input form__text-input" placeholder="Объём от, м.куб">
                 <input type="text" class="present__text-input form__text-input" placeholder="до">
               </div>
-            </fieldset>
-            <fieldset class="form__fieldset present__fieldset present__fieldset--type">
-              <legend class="form__legend vis-hidd">Тип транспорта и груза</legend>
+            </div>
+            <div class="form__fieldset present__fieldset present__fieldset--type">
+              <h5 class="form__legend vis-hidd">Тип транспорта и груза</h5>
               <select class="present__form-select form__select">
                 <option class="present__select-option form__option" value="start">
                   Тип транспорта
@@ -216,7 +276,7 @@
                   какой-то тип
                 </option>
               </select>
-            </fieldset>
+            </div>
             <div class="present__form-btn-wrapper">
               <button type="reset" class="present__form-btn-reset btn btn--transparent">Сбросить фильтры</button>
               <button type="button" class="present__form-filter-mobile-btn">
@@ -253,10 +313,12 @@
           <div class="search-result__list-item result-item">
             <a href="#" class="result-item__favorite result-item__favorite--active"></a>
             <div class="result-item__top-wrapper">
-              <p class="result-item__number">0065536</p>
-              <b class="result-item__title">
-                Продкуты молочные
-              </b>
+              <div class="result-item__title-wrapper">
+                <p class="result-item__number">0065536</p>
+                <b class="result-item__title">
+                  Продкуты молочные
+                </b>
+              </div>
               <div class="result-item__price-wrapper">
                 <div class="result-item__price result-item__price--nds">
                   <span class="result-item__price-txt">с НДС</span>
@@ -323,10 +385,12 @@
           <div class="search-result__list-item result-item">
             <a href="#" class="result-item__favorite"></a>
             <div class="result-item__top-wrapper">
-              <p class="result-item__number">0065536</p>
-              <b class="result-item__title">
-                Овощи фрукты
-              </b>
+              <div class="result-item__title-wrapper">
+                <p class="result-item__number">0065536</p>
+                <b class="result-item__title">
+                  Овощи фрукты
+                </b>
+              </div>
               <div class="result-item__price-wrapper">
                 <div class="result-item__price result-item__price--nds">
                   <span class="result-item__price-txt">с НДС</span>
@@ -388,6 +452,7 @@
                 <span class="result-item__btn-bargain">Начать торги</span>
               </a>
             </div>
+            <p class="result-item__step">Шаг <span>500</span></p>
           </div>
         </div>
         <div class="search-result__pagination pagination">
@@ -495,43 +560,46 @@
           <h3 class="footer__list-title">Услуги</h3>
           <ul class="footer__list">
             <li class="footer__list-item">
-              <a href="#" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Партнёры</a>
             </li>
             <li class="footer__list-item">
-              <a href="#" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Бухгалтерия, ЭДО</a>
             </li>
             <li class="footer__list-item">
-              <a href="#" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Кредиты, лизинг</a>
             </li>
             <li class="footer__list-item">
-              <a href="#" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Для банков</a>
             </li>
             <li class="footer__list-item">
-              <a href="#" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Страховые компании</a>
             </li>
             <li class="footer__list-item">
-              <a href="#" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Автосервисы</a>
             </li>
             <li class="footer__list-item">
-              <a href="#" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Запчасти</a>
             </li>
             <li class="footer__list-item">
-              <a href="#" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Покупка и продажа авто</a>
             </li>
             <li class="footer__list-item">
-              <a href="#" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Топливные компании</a>
             </li>
             <li class="footer__list-item">
-              <a href="#" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Аналитика</a>
             </li>
             <li class="footer__list-item">
-              <a href="#" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Контроль и учёт зап. частей</a>
             </li>
             <li class="footer__list-item">
-              <a href="#" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Инвестиции</a>
             </li>
             <li class="footer__list-item">
-              <a href="#" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Факторинг</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__list-link">Мониторинг транспорта по GPS</a>
             </li>
           </ul>
         </div>
@@ -561,7 +629,7 @@
         </ul>
         <div class="footer__email">
           <span class="footer__email-txt">E-mail:</span>
-          <a href="mailto:info@nsinfo.su">info@nsinfo.su</a>
+          <a href="mailto:info@nsinfo.su" class="footer__email-link">info@nsinfo.su</a>
         </div>
       </div>
     </div>
