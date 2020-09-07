@@ -92,8 +92,11 @@ if (viewport < 1200) {
     slidesToScroll: 1,
     dots: true,
     arrows: false,
-    rows: 2
-  })
+    rows: 2,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    accessibility: false
+  });
 }
 // появление подменю в пункте УСЛУГИ
 if (viewport > 1200) {
