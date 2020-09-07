@@ -61,7 +61,6 @@ $('.present__form-btn-close').click(function() {
   }
 });
 // slick slider на главной странице
-
 if (viewport < 1200) {
   $('.present__slider-wrapper').slick({
     responsive: [
@@ -95,4 +94,15 @@ if (viewport < 1200) {
     arrows: false,
     rows: 2
   })
+}
+// появление подменю в пункте УСЛУГИ
+if (viewport > 1200) {
+  $('.header__navigation-list-item--services').mouseenter(function() {
+    console.log($('.header__sub-list'))
+    $('.header__sub-list').slideDown();
+  });
+  $('.header__navigation-list-item--services').mouseleave(function() {
+    console.log($('.header__sub-list'))
+    $('.header__sub-list').slideUp();
+  });
 }
