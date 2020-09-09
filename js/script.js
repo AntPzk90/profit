@@ -39,12 +39,20 @@ $('.header__sub-list-btn').click(function() {
   }
 });
 // открывание меню залогиненого юзера
-$('.header__logged-icon-img').click(function () {
-  $('.header__logged-name').slideToggle();
-  $('.header__logged-list').slideToggle();
-  $('.header__logged-icon').css('display', 'block');
-});
-
+if (viewport <= 1024) {
+  $('.header__logged-icon-img').click(function () {
+    $('.header__logged-name').slideToggle();
+    $('.header__logged-list').slideToggle();
+    $('.header__logged-icon').css('display', 'block');
+  });
+} else {
+  $('.header__logged-block').mouseenter(function() {
+    $('.header__logged-list').slideDown();
+  });
+  $('.header__logged-block').mouseleave(function() {
+    $('.header__logged-list').slideUp();
+  });
+}
 // открывание фильтров на мобильной версии
 $('.present__form-filter-mobile-btn').click(function() {
   $('.present__form').addClass('present__form--active');
@@ -101,11 +109,9 @@ if (viewport < 1200) {
 // появление подменю в пункте УСЛУГИ
 if (viewport > 1200) {
   $('.header__navigation-list-item--services').mouseenter(function() {
-    console.log($('.header__sub-list'))
     $('.header__sub-list').slideDown();
   });
   $('.header__navigation-list-item--services').mouseleave(function() {
-    console.log($('.header__sub-list'))
     $('.header__sub-list').slideUp();
   });
 }
