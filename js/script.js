@@ -115,3 +115,8 @@ if (viewport > 1200) {
     $('.header__sub-list').slideUp();
   });
 }
+
+$("#datpicker").datepicker({
+  changeMonth: true,
+  changeYear: true,
+});
