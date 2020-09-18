@@ -116,7 +116,7 @@ if (viewport > 1200) {
   });
 }
 
-$("#datpicker").datepicker({
+$(".datepicker").datepicker({
   changeMonth: true,
   changeYear: true,
 });
