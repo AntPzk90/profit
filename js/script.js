@@ -120,3 +120,8 @@ $(".datepicker").datepicker({
   changeMonth: true,
   changeYear: true,
 });
+// faq
+$('.faq__bold-txt').click(function() {
+  $(this).parent().toggleClass('faq__list-item--active');
+  $(this).next().slideToggle();
+});

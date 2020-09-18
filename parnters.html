@@ -14,7 +14,7 @@
 <body>
   <header class="header">
     <div class="header__wrapper container">
-      <a href="index.html" class="header__logo">
+      <a class="header__logo">
         <img src="./img/logo.png" width="133" height="33" class="header__logo-img" alt="header-logo">
       </a>
       <nav class="header__navigation">
@@ -24,7 +24,7 @@
               О проекте
             </a>
           </li>
-          <li class="header__navigation-list-item header__navigation-list-item--active">
+          <li class="header__navigation-list-item">
             <a href="index.html" class="header__navigation-link">
               Грузы
             </a>
@@ -41,7 +41,7 @@
             <button type="button" class="header__sub-list-btn"></button>
             <ul class="header__sub-list">
               <li class="header__sub-list-item">
-                <a href="partners.html" class="header__sub-list-link">
+                <a href="#" class="header__sub-list-link">
                   Партнёры
                 </a>
               </li>
@@ -118,7 +118,7 @@
             </a>
           </li>
           <li class="header__navigation-list-item">
-            <a href="vacancies.html" class="header__navigation-link">
+            <a href="partners.html" class="header__navigation-link">
               Вакансии
             </a>
           </li>
@@ -174,108 +174,73 @@
       </button>
     </div>
   </header>
-  <main class="main-cargo-owners">
-    <section class="cargo-owners">
-      <div class="cargo-owners__start-screen start-screen">
-        <div class="start-screen__wrapper container">
-          <h1 class="start-screen__title big-title">
-            Грузовладельци
-          </h1>
+  <main class="partners">
+    <section class="partners__main">
+      <div class="partners__main-wrapper container">
+        <div class="partners__top-wrapper">
+          <h1 class="partners__main-title big-title">Вакансии</h1>
+          <p class="partners__main-dscr">Здесь размещены объявления на открытые вакансии
+            в нашей компании. Если вы зантересованы в работе
+            переходите в нутрь вакансии и заполняйте анкету.</p>
         </div>
-      </div>
-      <div class="cargo-owners__list-wrapper container">
-        <div class="cargo-owners__list">
-          <div class="cargo-owners__list-item">
-            <div class="cargo-owners__company">
-              <img src="./img/user-icon.png" height="33" width="33" class="cargo-owners__company-icon" alt="user-icon">
-              <div class="cargo-owners__company-wrapper">
-                <a href="cargo-owner-profile.html" class="cargo-owners__company-name">АО "Заводоуковский
-                  машиностроительный завод"</a>
-                <p class="cargo-owners__company-town">г. Набережные Челны</p>
-              </div>
+        <ul class="partners__list">
+          <li class="partners__list-item">
+            <a href="partners-inner.html" class="partners__title-link">
+              HR-менеджер
+            </a>
+            <p class="partners__dscr">
+              Краткое описание должности и выполняемых задач. Много не нужно
+              достаточно две, три строки, что то типа анонса. Просто раскрыть суть
+              для интереса.
+            </p>
+            <div class="partners__wrapper-inner">
+              <span class="partners__salory">зп от 55 000</span>
+              <a class="partners__link"></a>
             </div>
-            <div class="cargo-owners__dscr">
-              <p class="cargo-owners__dscr-txt">
-                Электроинструмент, кухонная техника, товары
-                для дома и дачи, медицинские озонаторы,
-                электродвигатели, запчасти, расходные
-                материалы, более 600 типов авиационных
-                электроагрегатов, грузоперевозки
-              </p>
+          </li>
+          <li class="partners__list-item">
+            <a href="partners-inner.html" class="partners__title-link">
+              HR-менеджер
+            </a>
+            <p class="partners__dscr">
+              Краткое описание должности и выполняемых задач. Много не нужно
+              достаточно две, три строки, что то типа анонса. Просто раскрыть суть
+              для интереса.
+            </p>
+            <div class="partners__wrapper-inner">
+              <span class="partners__salory">зп от 55 000</span>
+              <a class="partners__link"></a>
             </div>
-            <a class="cargo-owners__btn btn btn--transparent">Написать грузовладельцу</a>
-          </div>
-          <div class="cargo-owners__list-item">
-            <div class="cargo-owners__company">
-              <img src="./img/kaz.png" height="33" width="33" class="cargo-owners__company-icon" alt="user-icon">
-              <div class="cargo-owners__company-wrapper">
-                <a href="cargo-owner-profile.html" class="cargo-owners__company-name">АО "Косулинский абразивный
-                  завод"</a>
-                <p class="cargo-owners__company-town">г. Набережные Челны</p>
-              </div>
+          </li>
+          <li class="partners__list-item">
+            <a href="partners-inner.html" class="partners__title-link">
+              Секретарь помощник руководителя
+            </a>
+            <p class="partners__dscr">
+              Краткое описание должности и выполняемых задач. Много не нужно
+              достаточно две, три строки, что то типа анонса. Просто раскрыть суть
+              для интереса. Секретарь помощник руководителя. Секретарь помощник руководителя.
+            </p>
+            <div class="partners__wrapper-inner">
+              <span class="partners__salory">зп по договоренности</span>
+              <a class="partners__link"></a>
             </div>
-            <div class="cargo-owners__dscr">
-              <p class="cargo-owners__dscr-txt">
-                Электроинструмент, кухонная техника, товары
-                Электроинструмент, кухонная техника, товары
-                для дома и дачи, медицинские озонаторы,
-                электродвигатели, запчасти, расходные
-                материалы, более 600 типов авиационных
-                электроагрегатов, грузоперевозки.Mедицинские озонаторы,
-                электродвигатели, запчасти, расходные
-                материалы, более 600 типов авиационных
-                электроагрегатов, грузоперевозки.
-              </p>
+          </li>
+          <li class="partners__list-item">
+            <a href="partners-inner.html" class="partners__title-link">
+              HR-менеджер
+            </a>
+            <p class="partners__dscr">
+              Краткое описание должности и выполняемых задач. Много не нужно
+              достаточно две, три строки, что то типа анонса. Просто раскрыть суть
+              для интереса.
+            </p>
+            <div class="partners__wrapper-inner">
+              <span class="partners__salory">зп от 55 000</span>
+              <a class="partners__link"></a>
             </div>
-            <a class="cargo-owners__btn btn btn--transparent">Написать грузовладельцу</a>
-          </div>
-          <div class="cargo-owners__list-item">
-            <div class="cargo-owners__company">
-              <img src="./img/kaz.png" height="33" width="33" class="cargo-owners__company-icon" alt="user-icon">
-              <div class="cargo-owners__company-wrapper">
-                <a href="cargo-owner-profile.html" class="cargo-owners__company-name">АО "Заводоуковский
-                  машиностроительный завод"</a>
-                <p class="cargo-owners__company-town">г. Набережные Челны</p>
-              </div>
-            </div>
-            <div class="cargo-owners__dscr">
-              <p class="cargo-owners__dscr-txt">
-                Электроинструмент, кухонная техника, товары
-                для дома и дачи, медицинские озонаторы,
-                электродвигатели, запчасти, расходные
-                материалы, более 600 типов авиационных
-                электроагрегатов, грузоперевозки.
-                Электроинструмент, кухонная техника, товары
-                для дома и дачи, медицинские озонаторы,
-                электродвигатели, запчасти, расходные
-                для дома и дачи, медицинские озонаторы,
-                электродвигатели, запчасти, расходные для дома и дачи, медицинские озонаторы,
-                электродвигатели, запчасти, расходные
-              </p>
-            </div>
-            <a class="cargo-owners__btn btn btn--transparent">Написать грузовладельцу</a>
-          </div>
-          <div class="cargo-owners__list-item">
-            <div class="cargo-owners__company">
-              <img src="./img/user-icon.png" height="33" width="33" class="cargo-owners__company-icon" alt="user-icon">
-              <div class="cargo-owners__company-wrapper">
-                <a href="cargo-owner-profile.html" class="cargo-owners__company-name">АО "Заводоуковский
-                  машиностроительный завод"</a>
-                <p class="cargo-owners__company-town">г. Набережные Челны</p>
-              </div>
-            </div>
-            <div class="cargo-owners__dscr">
-              <p class="cargo-owners__dscr-txt">
-                Электроинструмент, кухонная техника, товары
-                для дома и дачи, медицинские озонаторы,
-                электродвигатели, запчасти, расходные
-                материалы, более 600 типов авиационных
-                электроагрегатов, грузоперевозки
-              </p>
-            </div>
-            <a class="cargo-owners__btn btn btn--transparent">Написать грузовладельцу</a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -283,11 +248,11 @@
     <div class="footer__wrapper-top container">
       <div class="footer__main">
         <div class="footer__wrapper-inner">
-          <a href="index.html" class="footer__logo">
+          <a href="#" class="footer__logo">
             <img src="./img/logo.png" width="133" height="33" alt="footer-logo" class="footer__logo-img">
             <b class="footer__logo-txt">Грузоперевозки по Росии</b>
           </a>
-          <a href="#" class="footer__rkn-logo">
+          <a class="footer__rkn-logo">
             <img src="./img/zpd-rkn.png" width="196" height="22" alt="header-logo" class="footer__rkn-logo-img">
             <span class="footer__rkn-txt">Свидетельство о регистрации
               организации</span>
@@ -297,28 +262,28 @@
           <h3 class="footer__list-title">Карта сайта</h3>
           <ul class="footer__list">
             <li class="footer__list-item">
-              <a href="index.html" class="footer__list-link">Главная</a>
+              <a href="#" class="footer__list-link">Главная</a>
             </li>
             <li class="footer__list-item">
-              <a href="cargo-owners.html" class="footer__list-link">Грузовладельци</a>
+              <a href="#" class="footer__list-link">Грузовладельци</a>
             </li>
             <li class="footer__list-item">
-              <a href="about-project.html" class="footer__list-link">О проекте</a>
+              <a href="#" class="footer__list-link">О проекте</a>
             </li>
             <li class="footer__list-item">
               <a href="#" class="footer__list-link">Правила</a>
             </li>
             <li class="footer__list-item">
-              <a href="faq.html" class="footer__list-link">Вопросы</a>
+              <a href="#" class="footer__list-link">Вопросы</a>
             </li>
             <li class="footer__list-item">
               <a href="#" class="footer__list-link">Страховой фонд НС</a>
             </li>
             <li class="footer__list-item">
-              <a href="vacancies.html" class="footer__list-link">Вакансии</a>
+              <a href="#" class="footer__list-link">Вакансии</a>
             </li>
             <li class="footer__list-item">
-              <a href="contacts.html" class="footer__list-link">Контакты</a>
+              <a href="#" class="footer__list-link">Контакты</a>
             </li>
           </ul>
           <a class="footer__rkn-logo">
@@ -331,7 +296,7 @@
           <h3 class="footer__list-title">Услуги</h3>
           <ul class="footer__list">
             <li class="footer__list-item">
-              <a href="partners.html" class="footer__list-link">Партнёры</a>
+              <a href="#" class="footer__list-link">Партнёры</a>
             </li>
             <li class="footer__list-item">
               <a href="#" class="footer__list-link">Бухгалтерия, ЭДО</a>
