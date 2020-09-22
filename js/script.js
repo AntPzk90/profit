@@ -12,6 +12,14 @@ $(document).ready(function () {
 // открывание мобильного меню
 $('.header__mobile-btn').click(function () {
   $('.header__navigation').slideToggle();
+  removeClassFunc = function () {
+    $('.inner-navigation__fixed-wrapper').removeClass('inner-navigation__fixed-wrapper--statick')
+  };
+  if ($('.inner-navigation__fixed-wrapper').hasClass('inner-navigation__fixed-wrapper--statick')) {
+    setTimeout(removeClassFunc, 400);
+  } else {
+    $('.inner-navigation__fixed-wrapper').addClass('inner-navigation__fixed-wrapper--statick');
+  }
   if (viewport < 768) {
     $('.header__user-list').slideToggle();
     $('.header__user-list').css('display', 'flex');
@@ -139,7 +147,7 @@ if ($('.bookkeeping__1c-info').length > 0) {
     arrows: true,
   });
 }
-if($('.bookkeeping__advantages-slider').length > 0) {
+if ($('.bookkeeping__advantages-slider').length > 0) {
   $('.bookkeeping__advantages-slider').slick({
     // slidesToShow: 1,
     // slidesToScroll: 1,
@@ -148,7 +156,7 @@ if($('.bookkeeping__advantages-slider').length > 0) {
   });
 }
 
-// if($('.bookkeeping__video')) {
+// if($('.bookkeeping__video').length > 0) {
 //   let video = $('.bookkeeping__video');
 //   let videoBtn = $('.bookkeeping__video-btn');
 
@@ -162,3 +170,22 @@ if($('.bookkeeping__advantages-slider').length > 0) {
 
 //   });
 // }
+if ($('.inner-navigation-btn').length > 0) {
+  $('.inner-navigation-btn').click(function (evt) {
+    evt.preventDefault();
+    $(this).toggleClass('inner-navigation-btn--active');
+    $('.inner-navigation__list').slideToggle();
+  });
+}
+$(window).scroll(function (evt) {
+  var scrolling = window.scrollY;
+  if (scrolling > $('.header__wrapper').height()) {
+    $('main').css('paddingTop', '62px');
+    $('.inner-navigation__fixed-wrapper').addClass('inner-navigation__fixed-wrapper--fixed');
+    $('.inner-navigation__list').addClass('inner-navigation__list--fixed');
+  } else {
+    $('main').removeAttr('style');
+    $('.inner-navigation__fixed-wrapper').removeClass('inner-navigation__fixed-wrapper--fixed');
+    $('.inner-navigation__list').removeClass('inner-navigation__list--fixed');
+  }
+});
