@@ -1,7 +1,7 @@
 // === подключение библиотек === //
 //преобразуем селекты библиотека https://select2.org/
 let viewport = $(document).width();
-$(document).ready(function() {
+$(document).ready(function () {
   $('.form__select').select2({
   });
   $('.pagination__select').select2({
@@ -30,7 +30,7 @@ $('.header__mobile-btn').click(function () {
   }
 });
 // открывание подменю в пункте услуги
-$('.header__sub-list-btn').click(function() {
+$('.header__sub-list-btn').click(function () {
   $(this).toggleClass('header__sub-list-btn--active');
   if ($(this).hasClass('header__sub-list-btn--active')) {
     $('.header__sub-list').slideDown();
@@ -46,23 +46,23 @@ if (viewport <= 1024) {
     $('.header__logged-icon').css('display', 'block');
   });
 } else {
-  $('.header__logged-block').mouseenter(function() {
+  $('.header__logged-block').mouseenter(function () {
     $('.header__logged-list').slideDown();
   });
-  $('.header__logged-block').mouseleave(function() {
+  $('.header__logged-block').mouseleave(function () {
     $('.header__logged-list').slideUp();
   });
 }
 // открывание фильтров на мобильной версии
-$('.present__form-filter-mobile-btn').click(function() {
+$('.present__form-filter-mobile-btn').click(function () {
   $('.present__form').addClass('present__form--active');
   $(this).css('display', 'none');
   $('.present__form-wrapper').css('padding-bottom', '0');
-  $('html, body').animate({scrollTop: 0},300);
+  $('html, body').animate({ scrollTop: 0 }, 300);
 });
 // закрытие фильтров на мобильной версии
-$('.present__form-btn-close').click(function() {
-  if ($('.present__form').hasClass('present__form--active')){
+$('.present__form-btn-close').click(function () {
+  if ($('.present__form').hasClass('present__form--active')) {
     $('.present__form').removeClass('present__form--active');
     $('.present__form-filter-mobile-btn').removeAttr('style');
     $('.present__form-wrapper').removeAttr('style');
@@ -108,20 +108,57 @@ if (viewport < 1200) {
 }
 // появление подменю в пункте УСЛУГИ
 if (viewport > 1200) {
-  $('.header__navigation-list-item--services').mouseenter(function() {
+  $('.header__navigation-list-item--services').mouseenter(function () {
     $('.header__sub-list').slideDown();
   });
-  $('.header__navigation-list-item--services').mouseleave(function() {
+  $('.header__navigation-list-item--services').mouseleave(function () {
     $('.header__sub-list').slideUp();
   });
 }
 
-$(".datepicker").datepicker({
-  changeMonth: true,
-  changeYear: true,
-});
+if ($(".datepicker").length > 0) {
+  console.log($(".datepicker"))
+  $(".datepicker").datepicker({
+    changeMonth: true,
+    changeYear: true,
+  });
+}
+
+
 // faq
-$('.faq__bold-txt').click(function() {
+$('.faq__bold-txt').click(function () {
   $(this).parent().toggleClass('faq__list-item--active');
   $(this).next().slideToggle();
 });
+// slider бухгалтерия
+if ($('.bookkeeping__1c-info').length > 0) {
+  $('.bookkeeping__1c-info').slick({
+    // slidesToShow: 1,
+    // slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+  });
+}
+if($('.bookkeeping__advantages-slider').length > 0) {
+  $('.bookkeeping__advantages-slider').slick({
+    // slidesToShow: 1,
+    // slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+  });
+}
+
+// if($('.bookkeeping__video')) {
+//   let video = $('.bookkeeping__video');
+//   let videoBtn = $('.bookkeeping__video-btn');
+
+//   videoBtn.click(function() {
+//     if (video[0].duration != video[0].currentTime) {
+//       video[0].pause();
+//     }  else {
+//       video[0].play();
+//     }
+
+
+//   });
+// }
