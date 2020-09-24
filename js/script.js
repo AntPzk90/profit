@@ -191,3 +191,12 @@ if (viewport < 768) {
     }
   });
 }
+
+if($('.table-pa__btn').length > 0) {
+  $('.table-pa__btn').mouseenter(function() {
+    $(this).find('.table__hint').fadeIn();
+  });
+  $('.table-pa__btn').mouseleave(function() {
+    $(this).find('.table__hint').fadeOut();
+  })
+}

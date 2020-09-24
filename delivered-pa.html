@@ -177,7 +177,7 @@
   <main class="personal-area-main">
     <section class="personal-area">
       <div class="personal-area__wrapper container">
-        <div class="personal-area__bread-crumbs bread-crumbs">
+        <div class="personal-area__bread-crumbs bread-crumbs bread-crumbs--my-transport-pa">
           <ul class="bread-crumbs__list">
             <li class="bread-crumbs__list-item">
               <a href="index.html" class="bread-crumbs__list-link">Главная</a>
@@ -186,20 +186,20 @@
               <a href="index-pa.html" class="bread-crumbs__list-link">Личный кабинет</a>
             </li>
             <li class="bread-crumbs__list-item bread-crumbs__list-item--active">
-              Настройка профиля
+              Доставляемые грузы
             </li>
           </ul>
         </div>
         <div class="personal-area__nav inner-navigation">
           <div class="inner-navigation__fixed-wrapper">
-            <p class="inner-navigation__active-page">Настройки профиля</p>
+            <p class="inner-navigation__active-page">Доставляемые грузы</p>
             <a href="#" class="inner-navigation__btn"></a>
           </div>
           <ul class="inner-navigation__list">
             <li class="inner-navigation__list-item">
               <a href="index-pa.html" class="inner-navigation__list-link">Главная</a>
             </li>
-            <li class="inner-navigation__list-item inner-navigation__list-item--active">
+            <li class="inner-navigation__list-item">
               <a href="profile-pa.html" class="inner-navigation__list-link">Настройки профиля</a>
             </li>
             <li class="inner-navigation__list-item">
@@ -209,7 +209,7 @@
               <a href="favorites-pa.html" class="inner-navigation__list-link">Избранное</a>
             </li>
             <li class="inner-navigation__list-item">
-              <a href="cargo-pa.html" class="inner-navigation__list-link">Мои грузы</a>
+              <a href="my-transport-pa.html" class="inner-navigation__list-link">Мои грузы</a>
             </li>
             <li class="inner-navigation__list-item">
               <a href="my-transport-pa.html" class="inner-navigation__list-link">Мой транспорт</a>
@@ -217,11 +217,11 @@
             <li class="inner-navigation__list-item">
               <a href="my-drivers-pa.html" class="inner-navigation__list-link">Мои водители</a>
             </li>
-            <li class="inner-navigation__list-item">
+            <li class="inner-navigation__list-item inner-navigation__list-item--active">
               <a href="delivered-pa.html" class="inner-navigation__list-link">Доставляемые грузы</a>
             </li>
             <li class="inner-navigation__list-item">
-              <a href="archive-cargo-pa.html" class="inner-navigation__list-link">Архив грузов</a>
+              <a href="cargo-archive-pa.html" class="inner-navigation__list-link">Архив грузов</a>
             </li>
             <li class="inner-navigation__list-item">
               <a href="messages-pa.html" class="inner-navigation__list-link">Сообщения</a>
@@ -231,207 +231,208 @@
             </li>
           </ul>
         </div>
-        <div class="personal-area__content content-profile-pa">
-          <div class="content-profile-pa__wrapper">
-            <h1 class="content-profile-pa__title big-title">Hастройки профиля</h1>
-            <form class="content-profile-pa__form from">
-              <div class="content-profile-pa__wrapper-main-data">
-                <b class="content-profile-pa__mini-title">Общие данные</b>
-                <div class="content-profile-pa__wrapper-inner">
-                  <div class="content-profile-pa__avatar-wrapper">
-                    <div class="content-profile-pa__avatar">
-                      <img src="./img/avatar.png" width="14" height="24" title="avatar" alt="avatar" class="content-profile-pa__avatar-img">
-                    </div>
-                    <label class="content-profile-pa__form-label form__label">
-                      Аватар
-                      <div class="content-profile-pa__form-file-wrapper">
-                        Изменить
-                        <input type="file" class="content-profile-pa__form-file form__input-file">
-                      </div>
-                    </label>
+        <div class="personal-area__content delivered-pa">
+          <div class="delivered-pa__wrapper">
+            <div class="delivered-pa__top-wrapper">
+              <h1 class="delivered-pa__title big-title">Доставляемые грузы</h1>
+              <a href="my-transport-pa-inner.html" class="delivered-pa__btn btn btn--brown">Добавить транспорт</a>
+            </div>
+            <div class="delivered-pa__wrapper table-pa table-pa--5 table-pa--deliver-pa">
+              <div class="delivered-pa__table table-pa__wrapper">
+                <div class="table-pa__title-row">
+                  <div class="table-pa__title-item">
+                    №
                   </div>
-                  <label class="content-profile-pa__form-label form__label">
-                    Название организации
-                    <input type="text" name="name" class="content-profile-pa__form-input form__text-input" placeholder="Укажите название организации">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Логин
-                    <input type="text" name="new-pass" class="content-profile-pa__form-input form__text-input" placeholder="Ваш логин">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Новый пароль
-                    <input type="password" name="new-pass" class="content-profile-pa__form-input form__text-input" placeholder="Новый парль если хотите его сменить">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Новый пароль ещё раз
-                    <input type="password" name="repeat-pass" class="content-profile-pa__form-input form__text-input" placeholder="Повторите пароль">
-                  </label>
+                  <div class="table-pa__title-item">
+                    Наименование
+                  </div>
+                  <div class="table-pa__title-item">
+                    Откуда - Куда
+                  </div>
+                  <div class="table-pa__title-item">
+                    Статус
+                  </div>
+                  <div class="table-pa__title-item">
+                    Опции
+                  </div>
                 </div>
-              </div>
-              <div class="content-profile-pa__wrapper-contact-info">
-                <b class="content-profile-pa__mini-title">Контактная информация</b>
-                <div class="content-profile-pa__wrapper-inner">
-                  <label class="content-profile-pa__form-label form__label">
-                    Ф.И.О. контактного лица
-                    <input type="text" name="name-user" class="content-profile-pa__form-input form__text-input" placeholder="Укажите фамилию, имя, отчество">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    E-mail может отличаться от логина
-                    <input type="email" name="email" class="content-profile-pa__form-input form__text-input" placeholder="Укажите email">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Телефон
-                    <input type="tel" name="tel" class="content-profile-pa__form-input form__text-input" placeholder="Укажите телефон">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Сайт
-                    <input type="text" name="site" class="content-profile-pa__form-input form__text-input" placeholder="Укажите сайт">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Регион
-                    <input type="text" name="region" class="content-profile-pa__form-input form__text-input" placeholder="Укажите регион">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Город
-                    <input type="text" name="region" class="content-profile-pa__form-input form__text-input" placeholder="Укажите город">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Улица
-                    <input type="text" name="street" class="content-profile-pa__form-input form__text-input" placeholder="Укажите улицу">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Номер дома
-                    <input type="text" name="home-number" class="content-profile-pa__form-input form__text-input" placeholder="Укажите номер">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Номер офиса / квартиры
-                    <input type="text" name="work-tel" class="content-profile-pa__form-input form__text-input" placeholder="Укажите номер">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Индекс
-                    <input type="text" name="index" class="content-profile-pa__form-input form__text-input" placeholder="Укажите индекс">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Дополнительные контакты
-                    <textarea name="additional-contact" class="content-profile-pa__form-input form__text-input"></textarea>
-                  </label>
-                </div>
-              </div>
-              <div class="content-profile-pa__wrapper-requisites">
-                <b class="content-profile-pa__mini-title">Реквизиты организации / ИП</b>
-                <div class="content-profile-pa__wrapper-inner">
-                  <label class="content-profile-pa__form-label form__label">
-                    ОГРН/ОГРНИП
-                    <input type="text" name="ogrn-number" class="content-profile-pa__form-input form__text-input" placeholder="Укажите номер">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    ИНН
-                    <input type="text" name="site" class="content-profile-pa__form-input form__text-input" placeholder="Укажите номер">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    КПП
-                    <input type="text" name="kpp-number" class="content-profile-pa__form-input form__text-input" placeholder="Укажите номер">
-                  </label><label class="content-profile-pa__form-label form__label">
-                    БИК
-                    <input type="text" name="bik-number" class="content-profile-pa__form-input form__text-input" placeholder="Укажите номер">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Название банка
-                    <input type="text" name="name-bank" class="content-profile-pa__form-input form__text-input" placeholder="Укажите название">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Город банка
-                    <input type="text" name="town-bank" class="content-profile-pa__form-input form__text-input" placeholder="Укажите город">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Корр. счёт
-                    <input type="text" name="checking-account" class="content-profile-pa__form-input form__text-input" placeholder="Укажите номер">
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Расчётный/лицевой счёт
-                    <input type="text" name="checking-account-2" class="content-profile-pa__form-input form__text-input" placeholder="Укажите номер">
-                  </label>
-                </div>
-                <ul class="content-profile-pa__checkbox-list form__list">
-                  <li class="content-profile-pa__checkbox-list-item">
-                    <label class="content-profile-pa__form-label form__label">
-                      <input type="checkbox" name="served" class="content-profile-pa__form-checkbox form__checkbox">
-                      Являюсь платильщиком НДС
-                    </label>
-                  </li>
-                  <li class="content-profile-pa__checkbox-list-item">
-                    <label class="content-profile-pa__form-label form__label">
-                      <input type="checkbox" name="unsift" class="content-profile-pa__form-checkbox form__checkbox">
-                      Не являюсь платильщиком НДС
-                    </label>
-                  </li>
-                </ul>
-              </div>
-              <div class="content-profile-pa__wrapper-documents">
-                <b class="content-profile-pa__mini-title">Документы</b>
-                <p class="content-profile-pa__dscr">Для подтверждения своего статуса пожалуйста загрузите документы!</p>
-                <div class="content-profile-pa__wrapper-inner">
-                  <label class="content-profile-pa__form-label content-profile-pa__form-label--file content-profile-pa__form-label--passpot form__label">
-                    Паспорт
-                    <p class="content-profile-pa__form-file-indicator">
-                      Документ не загружен
-                    </p>
-                    <div class="content-profile-pa__form-file-wrapper">
-                      Загрузить
-                      <input type="file" class="content-profile-pa__form-file form__input-file">
+                <div class="table-pa__content">
+                  <div class="table-pa__row">
+                    <div class="table-pa__item">
+                      000694
                     </div>
-                    <a class="content-profile-pa__form-file-delete-link">
-                      Удалить
-                    </a>
-                  </label>
-                  <label class="content-profile-pa__form-label content-profile-pa__form-label--file content-profile-pa__form-label--inn form__label">
-                    Свидетельство ИНН
-                    <p class="content-profile-pa__form-file-indicator">
-                      Документ не загружен
-                    </p>
-                    <div class="content-profile-pa__form-file-wrapper">
-                      Загрузить
-                      <input type="file" class="content-profile-pa__form-file form__input-file">
+                    <div class="table-pa__item">
+                      Трал
                     </div>
-                    <a class="content-profile-pa__form-file-delete-link">
-                      Удалить
-                    </a>
-                  </label>
-                  <label class="content-profile-pa__form-label content-profile-pa__form-label--file content-profile-pa__form-label--ogrn content-profile-pa__form-label--file-active form__label">
-                    Свидетельство ОГРН
-                    <p class="content-profile-pa__form-file-indicator">
-                      ОГРН Логистика.pdf
-                    </p>
-                    <div class="content-profile-pa__form-file-wrapper">
-                      Загрузить
-                      <input type="file" class="content-profile-pa__form-file form__input-file">
+                    <div class="table-pa__item">
+                      Владивосток - Москва
                     </div>
-                    <a class="content-profile-pa__form-file-delete-link">
-                      Удалить
-                    </a>
-                  </label>
-                  <a href="#" class="content-profile-pa__form-btn btn btn--brown">Отправить документы</a>
+                    <div class="table-pa__item">
+                      Опубликован
+                    </div>
+                    <div class="table-pa__item">
+                      <div class="table-pa__buttons-wrapper">
+                        <a href="#" class="table-pa__btn table-pa__message">
+                          <span class="table__hint">Сознать копию</span>
+                        </a>
+                        <a href="#" class="table-pa__btn table-pa__delivered">
+                          <span class="table__hint">Пользователь</span>
+                        </a>
+                        <a href="#" class="table-pa__btn table-pa__info">
+                          <span class="table-pa__btn-txt">20000 &#8381;</span>
+                          <span class="table-pa__btn-txt">до: 31.08.20</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-pa__row">
+                    <div class="table-pa__item">
+                      000694
+                    </div>
+                    <div class="table-pa__item">
+                      Бортовой самосвал
+                    </div>
+                    <div class="table-pa__item">
+                      Владивосток - Москва
+                    </div>
+                    <div class="table-pa__item">
+                      Опубликован
+                    </div>
+                    <div class="table-pa__item">
+                      <div class="table-pa__buttons-wrapper">
+                        <a href="#" class="table-pa__btn table-pa__message">
+                          <span class="table__hint">Сознать копию</span>
+                        </a>
+                        <a href="#" class="table-pa__btn table-pa__delivered">
+                          <span class="table__hint">Пользователь</span>
+                        </a>
+                        <a href="#" class="table-pa__btn table-pa__info">
+                          <span class="table-pa__btn-txt">20000 &#8381;</span>
+                          <span class="table-pa__btn-txt">до: 31.08.20</span>
+
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-pa__row">
+                    <div class="table-pa__item">
+                      000694
+                    </div>
+                    <div class="table-pa__item">
+                      Термобудка
+                    </div>
+                    <div class="table-pa__item">
+                      Владивосток - Москва
+                    </div>
+                    <div class="table-pa__item">
+                      Опубликован
+                    </div>
+                    <div class="table-pa__item">
+                      <div class="table-pa__buttons-wrapper">
+                        <a href="#" class="table-pa__btn table-pa__message">
+                          <span class="table__hint">Сознать копию</span>
+                        </a>
+                        <a href="#" class="table-pa__btn table-pa__delivered">
+                          <span class="table__hint">Пользователь</span>
+                        </a>
+                        <a href="#" class="table-pa__btn table-pa__info">
+                          <span class="table-pa__btn-txt">20000 &#8381;</span>
+                          <span class="table-pa__btn-txt">до: 31.08.20</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-pa__row">
+                    <div class="table-pa__item">
+                      000694
+                    </div>
+                    <div class="table-pa__item">
+                      Трал
+                    </div>
+                    <div class="table-pa__item">
+                      Владивосток - Москва
+                    </div>
+                    <div class="table-pa__item">
+                      Опубликован
+                    </div>
+                    <div class="table-pa__item">
+                      <div class="table-pa__buttons-wrapper">
+                        <a href="#" class="table-pa__btn table-pa__message">
+                          <span class="table__hint">Сознать копию</span>
+                        </a>
+                        <a href="#" class="table-pa__btn table-pa__delivered">
+                          <span class="table__hint">Пользователь</span>
+                        </a>
+                        <a href="#" class="table-pa__btn table-pa__info">
+                          <span class="table-pa__btn-txt">20000 &#8381;</span>
+                          <span class="table-pa__btn-txt">до: 31.08.20</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-pa__row">
+                    <div class="table-pa__item">
+                      000694
+                    </div>
+                    <div class="table-pa__item">
+                      Трал
+                    </div>
+                    <div class="table-pa__item">
+                      Владивосток - Москва
+                    </div>
+                    <div class="table-pa__item">
+                      Опубликован
+                    </div>
+                    <div class="table-pa__item">
+                      <div class="table-pa__buttons-wrapper">
+                        <a href="#" class="table-pa__btn table-pa__message">
+                          <span class="table__hint">Сознать копию</span>
+                        </a>
+                        <a href="#" class="table-pa__btn table-pa__delivered">
+                          <span class="table__hint">Пользователь</span>
+                        </a>
+                        <a href="#" class="table-pa__btn table-pa__info">
+                          <span class="table-pa__btn-txt">20000 &#8381;</span>
+                          <span class="table-pa__btn-txt">до: 31.08.20</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-pa__row">
+                    <div class="table-pa__item">
+                      000694
+                    </div>
+                    <div class="table-pa__item">
+                      Трал
+                    </div>
+                    <div class="table-pa__item">
+                      Владивосток - Москва
+                    </div>
+                    <div class="table-pa__item">
+                      Опубликован
+                    </div>
+                    <div class="table-pa__item">
+                      <div class="table-pa__buttons-wrapper">
+                        <a href="#" class="table-pa__btn table-pa__message">
+                          <span class="table__hint">Сознать копию</span>
+                        </a>
+                        <a href="#" class="table-pa__btn table-pa__delivered">
+                          <span class="table__hint">Пользователь</span>
+                        </a>
+                        <a href="#" class="table-pa__btn table-pa__info">
+                          <span class="table-pa__btn-txt">20000 &#8381;</span>
+                          <span class="table-pa__btn-txt">до: 31.08.20</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="content-profile-pa__wrapper-additionally">
-                <b class="content-profile-pa__mini-title">Дополнительная информация</b>
-                <div class="content-profile-pa__wrapper-inner">
-                  <label class="content-profile-pa__form-label form__label">
-                    Краткое описание
-                    <textarea name="additional-short" class="content-profile-pa__form-input form__text-input"></textarea>
-                  </label>
-                  <label class="content-profile-pa__form-label form__label">
-                    Полное описание
-                    <textarea name="additional-long" class="content-profile-pa__form-input form__text-input"></textarea>
-                  </label>
-                </div>
-              </div>
-              <button type="submit" class="content-profile-pa__form-btn-submit btn btn--brown">Сохранить
-                изменения</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
+      
     </section>
   </main>
   <footer class="footer">
