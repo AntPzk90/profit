@@ -200,3 +200,25 @@ if($('.table-pa__btn').length > 0) {
     $(this).find('.table__hint').fadeOut();
   })
 }
+
+if($('.cargo-pa-inner__checkbox-list-type-txt').length > 0) {
+  $('.cargo-pa-inner__checkbox-list-type-txt').click(function() {
+    $('.cargo-pa-inner__checkbox-list--active').not($(this).next()).slideUp().removeClass('cargo-pa-inner__checkbox-list--active');
+    $(this).next().toggleClass('cargo-pa-inner__checkbox-list--active');
+    $(this).next().slideToggle();
+  });
+
+  $(document).click(function(evt) {
+    let target = $(evt.target);
+
+      if (target.hasClass('cargo-pa-inner__form-label') || target.hasClass('cargo-pa-inner__form-checkbox') ||  target.hasClass('cargo-pa-inner__checkbox-list-type-txt')) {
+        console.log('cargo-pa-inner__form-label')
+      } else {
+        $('.cargo-pa-inner__checkbox-list-type-txt').next().slideUp();
+
+      }
+  })
+}
+if($('.timepicker')) {
+  $('.timepicker').timepicker({});
+}
