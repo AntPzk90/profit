@@ -252,7 +252,7 @@
                     <textarea type="text" name="cargo-dscr" class="cargo-pa-inner__form-input form__text-input" placeholder="Описание"></textarea>
                   </label>
                 </div>
-                <div class="cargo-pa-inner__wrapper-inner">
+                <div class="cargo-pa-inner__wrapper-inner cargo-pa-inner__wrapper-inner--flex-container">
                   <label class="cargo-pa-inner__form-label form__label">
                     Укажите автомобилей, шт <sup> *</sup>
                     <input type="text" name="count" class="cargo-pa-inner__form-input form__text-input" placeholder="Укажите количество">
@@ -510,9 +510,8 @@
                     <a href="#" class="cargo-pa-inner__btn-add btn btn--transparent">Добавить адрес загрузки</a>
                   </div>
                   <div class="cargo-pa-inner__wrapper-inner">
-                    <button class="cargo-pa-inner__delete-item">Удалить адрес</button>
                     <label class="cargo-pa-inner__form-label form__label">
-                      Адрес загрузки 2 <sup> *</sup>
+                      Адрес загрузки <sup> *</sup>
                       <input type="text" name="address" class="cargo-pa-inner__form-input form__text-input" placeholder="Укажите адрес">
                     </label>
                     <div class="cargo-pa-inner__form-date-wrapper form__label">
@@ -521,7 +520,7 @@
                       <input type="text" class="cargo-pa-inner__form-input form__text-input timepicker" placeholder="чч:мм">
                     </div>
                     <label class="cargo-pa-inner__form-label form__label">
-                      Подходящий тип загрузки
+                      Укажите подходящий Тип
                       <select class="cargo-pa-inner__form-select form__select">
                         <option value="start">Укажите тип</option>
                       </select>
@@ -534,6 +533,7 @@
                       Комментарий к загрузки
                       <textarea type="text" name="comment" class="cargo-pa-inner__form-input form__text-input" placeholder="Напиш комментарийите"></textarea>
                     </label>
+                    <button class="cargo-pa-inner__delete-item">Удалить адрес</button>
                   </div>
                   <a href="#" class="cargo-pa-inner__btn-add btn btn--transparent">Добавить адрес загрузки</a>
                 </div>
@@ -567,7 +567,7 @@
                     <input type="text" class="cargo-pa-inner__form-input form__text-input timepicker" placeholder="чч:мм">
                   </div>
                 </div>
-                <div class="cargo-pa-inner__wrapper-inner">
+                <div class="cargo-pa-inner__wrapper-inner cargo-pa-inner__wrapper-inner--texareas">
                   <label class="cargo-pa-inner__form-label form__label">
                     Условия оплаты <sup> *</sup>
                     <textarea type="text" name="payment-terms" class="cargo-pa-inner__form-input form__text-input" placeholder="Укажите уловия оплаты доставки"></textarea>
@@ -623,6 +623,7 @@
                   </li>
                 </ul>
               </div>
+              <p class="cargo-pa-inner__required-info"><sup>*</sup> Звездочкой обозначены поля обязательные для заполнения</p>
               <button type="submit" class="cargo-pa-inner__form-btn-submit btn btn--brown">Создать новый груз</button>
             </form>
           </div>
