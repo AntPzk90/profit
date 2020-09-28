@@ -217,8 +217,28 @@ if($('.cargo-pa-inner__checkbox-list-type-txt').length > 0) {
         $('.cargo-pa-inner__checkbox-list-type-txt').next().slideUp();
 
       }
-  })
+  });
 }
+
+if($('.transport-pa-inner__checkbox-list-type-txt').length > 0) {
+  $('.transport-pa-inner__checkbox-list-type-txt').click(function() {
+    $('.transport-pa-inner__checkbox-list--active').not($(this).next()).slideUp().removeClass('transport-pa-inner__checkbox-list--active');
+    $(this).next().toggleClass('transport-pa-inner__checkbox-list--active');
+    $(this).next().slideToggle();
+  });
+
+  $(document).click(function(evt) {
+    let target = $(evt.target);
+
+      if (target.hasClass('transport-pa-inner__form-label') || target.hasClass('transport-pa-inner__form-checkbox') ||  target.hasClass('transport-pa-inner__checkbox-list-type-txt')) {
+        console.log('transport-pa-inner__form-label')
+      } else {
+        $('.transport-pa-inner__checkbox-list-type-txt').next().slideUp();
+
+      }
+  });
+}
+
 if($('.timepicker')) {
   $('.timepicker').timepicker({});
 }
