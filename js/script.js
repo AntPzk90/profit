@@ -239,6 +239,6 @@ if($('.transport-pa-inner__checkbox-list-type-txt').length > 0) {
   });
 }
 
-if($('.timepicker')) {
+if($('.timepicker').length > 0) {
   $('.timepicker').timepicker({});
 }
