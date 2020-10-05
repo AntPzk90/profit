@@ -246,12 +246,4 @@ if($('.timepicker').length > 0) {
 $('.table-pa__mobile-present').click(function() {
   $(this).next().slideToggle(500).css('display', 'flex');
   $(this).toggleClass('table-pa__mobile-present--active');
-
-  if($(this).hasClass('table-pa__mobile-present--active')) {
-    $(this).next().find('.table-pa__mobile-title').fadeIn(200);
-    $(this).next().find('.table-pa__txt').fadeIn(200);
-  } else {
-    $(this).next().find('.table-pa__mobile-title').fadeOut(200);
-    $(this).next().find('.table-pa__txt').fadeOut(200);
-  }
 });
