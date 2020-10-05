@@ -242,3 +242,8 @@ if($('.transport-pa-inner__checkbox-list-type-txt').length > 0) {
 if($('.timepicker').length > 0) {
   $('.timepicker').timepicker({});
 }
+
+$('.table-pa__mobile-present').click(function() {
+  $(this).next().slideToggle().css('display', 'flex');
+  $(this).toggleClass('table-pa__mobile-present--active');
+});
