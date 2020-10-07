@@ -24,3 +24,18 @@ $('.header__mobile-btn').click(function(evt) {
     $('.header__navigation-list').removeClass('hide').addClass('show');
   }
 });
+
+$('.header__btn').click(function() {
+  $('.pop-up').fadeToggle(400);
+  $('.overlay').fadeToggle(400);
+});
+
+$('.pop-up__close-btn').click(function() {
+  $('.pop-up').fadeToggle(400);
+  $('.overlay').fadeToggle(400);
+});
+
+$('.overlay').click(function() {
+  $('.pop-up').fadeToggle(400);
+  $($this).fadeToggle(400);
+});
