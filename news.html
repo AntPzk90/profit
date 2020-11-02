@@ -97,7 +97,7 @@
                   <img src="img/svg/search-icon-black.svg" height="23" width="23" class="header__search-icon-black">
                 </a>
               </li><li class="header__user-list-item">
-                <a href="#" class="header__user-list-link header__user-cart--active">
+                <a href="cart.html" class="header__user-list-link header__user-cart--active">
                   <img src="img/svg/cart-icon.svg" height="23" width="24" class="header__cart-icon">
                   <img src="img/svg/cart-icon-black.svg" height="23" width="24" class="header__cart-icon-black">
                 </a>
@@ -198,7 +198,7 @@
                   <span>сентября</span>
                   <span>2020</span>
                 </p>
-                <a href="#" class="news-list__link">
+                <a href="news-page.html" class="news-list__link">
                   Средства цифровой радиосвязи для работы в индивидуальных средствах защиты
                 </a>
               </div>
@@ -213,7 +213,7 @@
                   <span>сентября</span>
                   <span>2020</span>
                 </p>
-                <a href="#" class="news-list__link">
+                <a href="news-page.html" class="news-list__link">
                   Тепловизионные решения измерения температуры потока людей
                 </a>
               </div>
@@ -228,7 +228,7 @@
                   <span>сентября</span>
                   <span>2020</span>
                 </p>
-                <a href="#" class="news-list__link">
+                <a href="news-page.html" class="news-list__link">
                   Интегрированные модули IP-камер для термокожухов Smartec
                 </a>
               </div>
@@ -243,7 +243,7 @@
                   <span>сентября</span>
                   <span>2020</span>
                 </p>
-                <a href="#" class="news-list__link">
+                <a href="news-page.html" class="news-list__link">
                   Средства цифровой радиосвязи для работы в индивидуальных средствах защиты
                 </a>
               </div>
@@ -258,7 +258,7 @@
                   <span>сентября</span>
                   <span>2020</span>
                 </p>
-                <a href="#" class="news-list__link">
+                <a href="news-page.html" class="news-list__link">
                   Тепловизионные решения измерения температуры потока людей
                 </a>
               </div>
@@ -273,7 +273,7 @@
                   <span>сентября</span>
                   <span>2020</span>
                 </p>
-                <a href="#" class="news-list__link">
+                <a href="news-page.html" class="news-list__link">
                   Тепловизионные решения измерения температуры потока людей
                 </a>
               </div>
@@ -288,7 +288,7 @@
                   <span>сентября</span>
                   <span>2020</span>
                 </p>
-                <a href="#" class="news-list__link">
+                <a href="news-page.html" class="news-list__link">
                   Средства цифровой радиосвязи для работы в индивидуальных средствах защиты
                 </a>
               </div>
@@ -303,7 +303,7 @@
                   <span>сентября</span>
                   <span>2020</span>
                 </p>
-                <a href="#" class="news-list__link">
+                <a href="news-page.html" class="news-list__link">
                   Тепловизионные решения измерения температуры потока людей
                 </a>
               </div>
@@ -318,12 +318,28 @@
                   <span>сентября</span>
                   <span>2020</span>
                 </p>
-                <a href="#" class="news-list__link">
+                <a href="news-page.html" class="news-list__link">
                   Тепловизионные решения измерения температуры потока людей
                 </a>
               </div>
             </div>
           </div>
+          <div class="news-list__item">
+            <img src="./img/small-news-icon.png" class="news-list__item-img">
+            <div class="news-list__item-wrapper">
+              <div class="news-list__txt-wrapper">
+                <p class="news-list__date">
+                  <span>12</span>
+                  <span>сентября</span>
+                  <span>2020</span>
+                </p>
+                <a href="news-page.html" class="news-list__link">
+                  Тепловизионные решения измерения температуры потока людей
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
         <a href="#" class="news__all-btn">Показать ещё</a>
       </div>
@@ -445,8 +461,36 @@
   </footer>
   <div class="pop-up">
     <button class="pop-up__close-btn"></button>
-  </div>
-  <div class="overlay">
+    <form class="pop-up__form form">
+      <b class="form__title">
+        Отправьте сообщение
+      </b>
+      <div class="form__wrapper">
+        <label class="form__label">
+          Имя*
+          <input type="text" class="form__input" placeholder="Напишите ваше имя" required>
+        </label>
+      </div>
+      <div class="form__wrapper">
+        <label class="form__label">
+          Ваш телефон*
+          <input type="text" class="form__input" placeholder="Укажите номер вашего телефона" required>
+        </label>
+      </div>
+      <div class="form__wrapper">
+        <label class="form__label">
+          Ваш e-mail*
+          <input type="text" class="form__input" placeholder="Укажите вашу почту" required>
+        </label>
+      </div>
+      <div class="form__wrapper form__wrapper--textarea">
+        <label class="form__label">
+          Сообщение*
+          <textarea type="text" class="form__input" placeholder="Чем мы можем вам помочь?" required></textarea>
+        </label>
+      </div>
+      <button type="submit" class="form__submit-btn">Отправить сообщение</button>
+    </form>
   </div>
   <script src="./js/jquery-3.5.1.min.js"></script>
   <script src="./select2/dist/js/select2.full.min.js"></script>
