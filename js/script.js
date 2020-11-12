@@ -211,14 +211,38 @@ if($('.slider').length > 0) {
 //select2 стр. news
 if($('.select').length > 0) {
   $(document).ready(function() {
-    $('.select').select2();
+    $('.select').select2({
+      minimumResultsForSearch: -1
+    });
   });
 }
 
 if($('.documents__filter-btn').length > 0) {
-  $('.documents__filter-btn').click(function() {
-    $(this).toggleClass('documents__filter-btn--active');
-    $(this).next().slideToggle(200);
+  $('.documents__filter-btn').click(function(evt) {
+    if($('.documents__filter-btn--active').length > 0) {
+      $('.documents__filter-btn--active').next().slideUp(0);
+      $('.documents__filter-btn--active').removeClass('documents__filter-btn--active');
+      $(this).addClass('documents__filter-btn--active');
+      $(this).next().slideDown(0);
+    } else {
+      $(this).addClass('documents__filter-btn--active');
+      $(this).next().slideDown(0);
+    }
+  });
+
+  $('.documents__filter-btn--active').click(function(){
+    $(this).next().slideUp(0);
+    $(this).removeClass('documents__filter-btn--active');
+  })
+
+  $(document).click(function(evt) {
+    let target = $(evt.target);
+    if(target.hasClass('documents__checkbox') || target.hasClass('documents__label') || target.hasClass('documents__filter-btn') || target.hasClass('documents__filter-btn--active')) {
+
+    } else  {
+      $('.documents__filter-btn--active').next().slideUp(0);
+      $('.documents__filter-btn--active').removeClass('documents__filter-btn--active');
+    }
   });
 }
 
@@ -294,4 +318,15 @@ if($(window).width() >= 768) {
     $('.present__sogan-txt:nth-child(1)').css('margin-left', (st - 1500) / 8 + 'px')
     $('.present__sogan-txt:last-child').css('margin-right', st / 8 + 'px')
   });
+}
+
+if($('.table__download').length > 0) {
+  $('.table__download').mouseover(function(){
+    $(this).css('color', '#DA3632');
+    $(this).parent().parent().find('.table__txt-bold').css('color', '#DA3632');
+  });
+  $('.table__download').mouseleave(function(){
+    $(this).removeAttr('style');
+    $(this).parent().parent().find('.table__txt-bold').removeAttr('style');
+  })
 }
