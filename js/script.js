@@ -1,9 +1,10 @@
-// открывание мобильного меню
+// открывание выпадашки каталога
 $('.header__catalog-btn--clicked').click(function () {
     $('.header__catalog-list').fadeToggle(500);
 });
 
-if(window.matchMedia('(max-width: 768px)').matches) {
+// кнопка каталога при расширении планшета становится кликабельной
+if(window.matchMedia('(max-width: 1200px)').matches) {
   $('.header__catalog-btn').addClass('header__catalog-btn--clicked');
   $('.header__search').click(function() {
     $('.header__search-form').fadeIn();
@@ -15,7 +16,7 @@ $('.slider--main > .slider__wrapper').slick({
   slidesToScroll: 1,
   dots: true,
   arrows: false,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 4000,
   accessibility: false,
 });

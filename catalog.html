@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="shortcut icon" href="img/ico.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./slick/slick.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Profit</title>
+</head>
+
+<body>
+  <div class="mobile-menu">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link">
+          Главная
+          <img src="img/svg/mobile-nav-main.svg" width="20" height="20" alt="icon">
+        </a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link mobile-menu__link--catalog">
+          Каталог
+          <img src="img/svg/mobile-nav-catalog.svg" width="20" height="19" alt="icon">
+        </a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link">
+          Корзина
+          <img src="img/svg/mobile-nav-cart.svg" width="22" height="20" alt="icon">
+        </a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link">
+          Поиск
+          <img src="img/svg/mobile-nav-search.svg" width="25" height="22" alt="icon">
+        </a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link mobile-menu__link--more">
+          Eщё
+          <img src="img/svg/mobile-nav-search.svg" width="17" height="3" alt="icon">
+        </a>
+      </li>
+    </ul>
+  </div>
+  <header class="header header--catalog">
+    <div class="header__wrapper">
+      <div class="header__top container">
+        <a class="header__logo">
+          <img src="img/header-logo.png" height="57" width="173" class="header__logo-img" alt="img">
+        </a>
+        <div class="header__top-user">
+          <div class="header__time">
+            10:00 - 18:00
+          </div>
+          <div class="header__tel">
+            <a href="tel:+74957907282" class="header__tel-link">
+              +7 (495) 790-72-82
+              <img src="img/svg/phone-call-icon.svg" class="header__tel-mudium-icon header__mudium-icon">
+            </a>
+          </div>
+          <div class="header__mail">
+            <a href="mailto:sales@kmprofit.ru" class="header__mail-link">
+              sales@kmprofit.ru
+              <img src="img/svg/mail-iocn-2.svg" class="header__tel-mudium-icon header__mudium-icon">
+            </a>
+          </div>
+          <div class="header__search">
+            <from class="header__search-form">
+              <input type="text" class="header__seacrh-input" placeholder="Поиск">
+              <button type="submit" class="header__search-submit"></button>
+            </from>
+            <img src="img/search-icon.png" class="header__tel-mudium-icon header__mudium-icon">
+          </div>
+          <div class="header__cart header__cart--active">
+            <span class="header__cart-count">14</span>
+            <a href="#" class="header__cart-link">
+
+            </a>
+          </div>
+        </div>
+        <div class="header__login">
+          <a class="header__login-btn btn">
+            Войти
+          </a>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header__bottom-wrapper container">
+          <div class="header__catalog-wrapper">
+            <button class="header__catalog-btn header__catalog-btn--clicked">
+              <div class="header__burger header__burger--active">
+                <span class="header__burger-decor"></span>
+              </div>
+              Каталог<span> товаров</span>
+            </button>
+            <ul class="header__catalog-list">
+              <li class="header__catalog-item">
+                <a class="header__catalog-link">
+                  Охранная и тревожная сигнализация
+                </a>
+              </li>
+              <li class="header__catalog-item">
+                <a class="header__catalog-link">
+                  Пожарная сигнализация
+                </a>
+              </li>
+              <li class="header__catalog-item">
+                <a class="header__catalog-link">
+                  Охранное телевидение
+                </a>
+              </li>
+              <li class="header__catalog-item">
+                <a class="header__catalog-link">
+                  Контроль доступа
+                </a>
+              </li>
+              <li class="header__catalog-item">
+                <a class="header__catalog-link">
+                  Оповещение, трансляция
+                </a>
+              </li>
+              <li class="header__catalog-item">
+                <a class="header__catalog-link">
+                  Сетевое оборудование
+                </a>
+              </li>
+              <li class="header__catalog-item">
+                <a class="header__catalog-link">
+                  Компьютеры, перефирия
+                </a>
+              </li>
+              <li class="header__catalog-item">
+                <a class="header__catalog-link">
+                  Источники питания
+                </a>
+              </li>
+              <li class="header__catalog-item header__catalog-item--close-btn-wrapp">
+                <button class="header__catalog-close"></button>
+              </li>
+            </ul>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item header__nav-item--active">
+                <a href="about-company.html" class="header__nav-link">
+                  О компании
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="payment-delivery.html" class="header__nav-link">
+                  Оплата и доставка
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="contacts.html" class="header__nav-link">
+                  Контакты
+                </a>
+              </li>
+              <li class="header__nav-item header__nav-item--close-btn-wrapp">
+                <button class="header__nav-close"></button>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__rev-tel">
+            <button type="button" class="header__rev-tel-btn">Обратный звонок</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="catalog">
+      <div class="catalog__wrapper container">
+        <div class="catalog__breadcrumbs breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Каталог</a>
+            </li>
+            <li class="breadcrumbs__item">
+              Охранная и тревожная сигнализация
+            </li>
+          </ul>
+        </div>
+        <h1 class="catalog__title">
+          Охранная и тревожная сигнализация
+        </h1>
+        <p class="catalog__dscr">
+          Торговый Дом «КМ ПРОФИТ» предлагает приобрести системы или отдельные элементы охранно-тревожных сигнализаций
+          от производителя Smartec, продукция которого известна своей надежностью, длительным сроком службы и простотой
+          в обслуживании.
+        </p>
+        <div class="catalog__wrapper-inner">
+          <div class="catalog__filters">
+
+          </div>
+          <div class="catalog__products">
+            <div class="catalog__list products products--catalog">
+              <div class="products__item products__item--catalog products__item--new">
+                <div class="products__img-wrapper">
+                  <img src="./img/product-2.jpg" class="products__img">
+                </div>
+                <div class="products__txt">
+                  <a href="#" class="products__link">
+                    Бесконтактная кнопка выхода SH-45TR SILVER
+                  </a>
+                  <p class="products__dscr">
+                    Питание: +12В (+1%, - 15%). Ресурс работы: более 100 миллионов нажатий. Степень защиты: IP68.
+                    Допустимая влажность: 10%-94%. Температурный режим: -27…+60°C
+                  </p>
+                  <b class="products__price">
+                    4 933.24
+                  </b>
+                  <button class="products__buy btn">
+                    Купить
+                  </button>
+                </div>
+              </div>
+              <div class="products__item products__item--catalog products__item--new">
+                <div class="products__img-wrapper">
+                  <img src="./img/product-3.jpg" class="products__img">
+                </div>
+                <div class="products__txt">
+                  <a href="#" class="products__link">
+                    Бесконтактная кнопка выхода SH-45TR SILVER
+                  </a>
+                  <p class="products__dscr">
+                    Питание: +12В (+1%, - 15%). Ресурс работы: более 100 миллионов нажатий. Степень защиты: IP68.
+                    Допустимая влажность: 10%-94%. Температурный режим: -27…+60°C
+                  </p>
+                  <b class="products__price">
+                    4 933.24
+                  </b>
+                  <button class="products__buy btn">
+                    Купить
+                  </button>
+                </div>
+              </div>
+              <div class="products__item products__item--catalog products__item--new">
+                <div class="products__img-wrapper">
+                  <img src="./img/product-4.jpg" class="products__img">
+                </div>
+                <div class="products__txt">
+                  <a href="#" class="products__link">
+                    Бесконтактная кнопка выхода SH-45TR SILVER
+                  </a>
+                  <p class="products__dscr">
+                    Питание: +12В (+1%, - 15%). Ресурс работы: более 100 миллионов нажатий. Степень защиты: IP68.
+                    Допустимая влажность: 10%-94%. Температурный режим: -27…+60°C
+                  </p>
+                  <b class="products__price">
+                    4 933.24
+                  </b>
+                  <button class="products__buy btn">
+                    Купить
+                  </button>
+                </div>
+              </div>
+              <div class="products__item products__item--catalog products__item--new">
+                <div class="products__img-wrapper">
+                  <img src="./img/product-1.jpg" class="products__img">
+                </div>
+                <div class="products__txt">
+                  <a href="#" class="products__link">
+                    Бесконтактная кнопка выхода SH-45TR SILVER
+                  </a>
+                  <p class="products__dscr">
+                    Питание: +12В (+1%, - 15%). Ресурс работы: более 100 миллионов нажатий. Степень защиты: IP68.
+                    Допустимая влажность: 10%-94%. Температурный режим: -27…+60°C
+                  </p>
+                  <b class="products__price">
+                    4 933.24
+                  </b>
+                  <button class="products__buy btn">
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper container">
+      <div class="footer__wrapper-contacts">
+        <div class="footer__column">
+          <div class="footer__tel">
+            <span class="footer__tel-span">
+              Телефон для связи
+            </span>
+            <a hrfe="#" class="footer__tel-link">
+              +7 (495) 790-72-82
+            </a>
+          </div>
+          <div class="footer__mail">
+            <span class="footer__mail-span">
+              E-mail для писем
+            </span>
+            <a hrfe="#" class="footer__mail-link">
+              sales@kmprofit.ru
+            </a>
+          </div>
+          <a class="footer__btn btn">
+            Заказать звонок
+          </a>
+        </div>
+      </div>
+      <div class="footer__wrapper-menus">
+        <ul class="footer__nav">
+          <li class="footer__nav-item">
+            <a class="footer__nav-link">
+              Каталог
+            </a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link">
+              О компании
+            </a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link">
+              Оплата и доставка
+            </a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link">
+              Новости
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__menu">
+          <li class="footer__menu-item">
+            <a class="footer__menu-link">
+              Бренды
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link">
+              Контакты
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link">
+              Карта сайта
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrapper-info">
+        <p class="footer__priv-pol">
+          Политика конфиденциальности
+        </p>
+        <p class="footer__priv-pol-info">
+          2018 - 2020 © ООО "КМ ПРОФИТ" Все права защищены
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./slick/slick.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
