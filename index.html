@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="img/ico.ico" type="image/x-icon">
   <link rel="stylesheet" href="./slick/slick.css">
+  <link rel="stylesheet" href="./jquery-ui-1.12.1/jquery-ui.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Profit</title>
 </head>
@@ -44,7 +45,7 @@
         </a>
       </li>
     </ul>
-    </div>
+  </div>
   <header class="header">
     <div class="header__wrapper">
       <div class="header__top container">
@@ -67,10 +68,10 @@
               <img src="img/svg/mail-iocn-2.svg" class="header__tel-mudium-icon header__mudium-icon">
             </a>
           </div>
-          <div class="header__search">
+          <div class="header__search" tabindex="0">
             <from class="header__search-form">
-              <input type="text" class="header__seacrh-input" placeholder="Поиск">
-              <button type="submit" class="header__search-submit"></button>
+              <input type="text" class="header__seacrh-input" placeholder="Поиск" readonly="readonly">
+              <button class="header__search-submit"></button>
             </from>
             <img src="img/search-icon.png" class="header__tel-mudium-icon header__mudium-icon">
           </div>
@@ -168,6 +169,15 @@
             <button type="button" class="header__rev-tel-btn">Обратный звонок</button>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="header__search-pop-up">
+      <div class="header__search-pop-up-wrapper container">
+        <form class="header__search-main-form">
+          <input type="search" class="header__search-main-input" placeholder="Введите ваш запрос">
+          <button type="submit" class="header__search-main-submit">Поиск</button>
+        </form>
+        <button type="button" class="header__search-close"></button>
       </div>
     </div>
   </header>
@@ -707,6 +717,7 @@
   </footer>
   <script src="./js/jquery-3.5.1.min.js"></script>
   <script src="./slick/slick.min.js"></script>
+  <script src="./jquery-ui-1.12.1/jquery-ui.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
 
