@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="img/ico.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./slick/slick.css">
   <link rel="stylesheet" href="./jquery-ui-1.12.1/jquery-ui.css">
   <link rel="stylesheet" href="./select2/dist/css/select2.min.css">
@@ -109,7 +112,7 @@
                       Охранные извещатели
                     </a>
                   </li>
-                  <li class="header__catalog-sub-item">
+                  <li class="header__catalog-sub-item header__catalog-sub-item--active">
                     <a class="header__catalog-sub-link">
                       Приемно-контрольные приборы
                     </a>
@@ -152,6 +155,11 @@
                   <li class="header__catalog-sub-item">
                     <a class="header__catalog-sub-link">
                       Коммуникационные модули
+                    </a>
+                  </li>
+                  <li class="header__catalog-sub-item header__catalog-sub-item--return">
+                    <a class="header__catalog-sub-link header__catalog-sub-link--return">
+                      Вернуться назад
                     </a>
                   </li>
                 </ul>
@@ -166,7 +174,7 @@
                       Охранные извещатели
                     </a>
                   </li>
-                  <li class="header__catalog-sub-item">
+                  <li class="header__catalog-sub-item header__catalog-sub-item--active">
                     <a class="header__catalog-sub-link">
                       Приемно-контрольные приборы
                     </a>
@@ -209,6 +217,11 @@
                   <li class="header__catalog-sub-item">
                     <a class="header__catalog-sub-link">
                       Коммуникационные модули
+                    </a>
+                  </li>
+                  <li class="header__catalog-sub-item header__catalog-sub-item--return">
+                    <a class="header__catalog-sub-link header__catalog-sub-link--return">
+                      Вернуться назад
                     </a>
                   </li>
                 </ul>
@@ -223,7 +236,7 @@
                       Охранные извещатели
                     </a>
                   </li>
-                  <li class="header__catalog-sub-item">
+                  <li class="header__catalog-sub-item header__catalog-sub-item--active">
                     <a class="header__catalog-sub-link">
                       Приемно-контрольные приборы
                     </a>
@@ -266,6 +279,11 @@
                   <li class="header__catalog-sub-item">
                     <a class="header__catalog-sub-link">
                       Коммуникационные модули
+                    </a>
+                  </li>
+                  <li class="header__catalog-sub-item header__catalog-sub-item--return">
+                    <a class="header__catalog-sub-link header__catalog-sub-link--return">
+                      Вернуться назад
                     </a>
                   </li>
                 </ul>
@@ -280,7 +298,7 @@
                       Охранные извещатели
                     </a>
                   </li>
-                  <li class="header__catalog-sub-item">
+                  <li class="header__catalog-sub-item header__catalog-sub-item--active">
                     <a class="header__catalog-sub-link">
                       Приемно-контрольные приборы
                     </a>
@@ -323,6 +341,11 @@
                   <li class="header__catalog-sub-item">
                     <a class="header__catalog-sub-link">
                       Коммуникационные модули
+                    </a>
+                  </li>
+                  <li class="header__catalog-sub-item header__catalog-sub-item--return">
+                    <a class="header__catalog-sub-link header__catalog-sub-link--return">
+                      Вернуться назад
                     </a>
                   </li>
                 </ul>
@@ -384,7 +407,7 @@
       <div class="header__search-pop-up-wrapper container">
         <form class="header__search-main-form">
           <input type="search" class="header__search-main-input" placeholder="Введите ваш запрос">
-          <button type="submit" class="header__search-main-submit">Поиск</button>
+          <button type="submit" class="header__search-main-submit">Начать</button>
         </form>
         <button type="button" class="header__search-close"></button>
       </div>
@@ -416,6 +439,7 @@
         </p>
         <div class="catalog__wrapper-inner">
           <form class="catalog__filters">
+            <button type="button" class="catalog__tab-close"></button>
             <div class="catalog__filetrs-title-wrap">
               <b class="catalog__filetrs-bold">Фильтры</b>
             </div>
@@ -479,6 +503,9 @@
           </form>
           <div class="catalog__products">
             <div class="catalog__sort">
+              <button class="catalog__filters-tab-btn">
+                Фильтры
+              </button>
               <form class="catalog__sort-form">
                 <select class="sort__select sort__select--name">
                   <option></option>
@@ -499,7 +526,7 @@
               </form>
             </div>
             <div class="catalog__list products products--catalog">
-              <div class="products__item products__item--catalog products__item--new">
+              <div class="products__item products__item--catalog products__item--new products__item--spacial">
                 <div class="products__img-wrapper">
                   <img src="./img/product-2.jpg" class="products__img">
                 </div>
