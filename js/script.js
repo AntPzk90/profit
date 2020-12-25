@@ -273,22 +273,22 @@ $('.product-item__counter-btn--minus').click(function() {
 // переключение вкладок описания товаров
 
 $('.product-item__dscr-btn--dscr').click(function() {
-  $('.product-item__dscr-btn').removeClass('product-item__dscr-btn--dscr');
-  $(this).addClass('.product-item__dscr-btn--active');
+  $('.product-item__dscr-btn').removeClass('product-item__dscr-btn--active');
+  $(this).addClass('product-item__dscr-btn--active');
   $('.product-item__dscr').fadeOut(0)
   $('#dscr').fadeIn(0);
 });
 
 $('.product-item__dscr-btn--characteristic').click(function() {
-  $('.product-item__dscr-btn').removeClass('product-item__dscr-btn--dscr');
-  $(this).addClass('.product-item__dscr-btn--active');
+  $('.product-item__dscr-btn').removeClass('product-item__dscr-btn--active');
+  $(this).addClass('product-item__dscr-btn--active');
   $('.product-item__dscr').fadeOut(0)
   $('#characteristic').fadeIn(0);
 });
 
 $('.product-item__dscr-btn--documents').click(function() {
-  $('.product-item__dscr-btn').removeClass('product-item__dscr-btn--dscr');
-  $(this).addClass('.product-item__dscr-btn--active');
+  $('.product-item__dscr-btn').removeClass('product-item__dscr-btn--active');
+  $(this).addClass('product-item__dscr-btn--active');
   $('.product-item__dscr').fadeOut(0)
   $('#documents').fadeIn(0);
 });
