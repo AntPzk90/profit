@@ -208,6 +208,21 @@ if ($('.sort__select').length > 0) {
       placeholder: 'По наличию',
       minimumResultsForSearch: -1,
     });
+
+    $('.sort__select--month').select2({
+      placeholder: 'Месяц',
+      minimumResultsForSearch: -1,
+    });
+
+    $('.sort__select--year').select2({
+      placeholder: 'Год',
+      minimumResultsForSearch: -1,
+    });
+
+    $('.sort__select--brend').select2({
+      placeholder: 'Бренд',
+      minimumResultsForSearch: -1,
+    });
   });
 }
 
