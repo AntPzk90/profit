@@ -128,7 +128,15 @@ if ($(window).width() <= 576) {
     $('.header__bottom').fadeIn(0);
     $('.header__nav-list').fadeIn(0);
     $('.header__rev-tel').fadeIn(0);
-  })
+  });
+
+  $('.mobile-menu__link--search').click(function() {
+    $('.header__search-pop-up').fadeIn(0);
+  });
+
+  $('.header__search-close').click(function () {
+    $('.header__search-pop-up').fadeOut(0);
+  });
 
   $('.header__nav-close').click(function () {
     $('.header__bottom').fadeOut(0);
@@ -158,9 +166,29 @@ $('.catalog__range').slider({
   step: 1,
   values: [0, 300000],
   slide: function (event, ui) {
-    $('#min').attr('value', ui.values[0])
-    $('#max').attr('value', ui.values[1])
+    $('#min').attr('value', ui.values[0]);
+
+    if($('#min').hasClass('catalog__input-price-min--not-active') &&  $('#min').attr('value') != 0) {
+      $('#min').removeClass('catalog__input-price-min--not-active');
+    }
+
+    $('#max').attr('value', ui.values[1]);
+    if($('#max').hasClass('catalog__input-price-max--not-active') && $('#max').attr('value') != 300000) {
+      $('#max').removeClass('catalog__input-price-max--not-active');
+    }
   },
+});
+
+$('.catalog__input-price-min').change(function() {
+  if($(this).hasClass('catalog__input-price-min--not-active')) {
+    $(this).removeClass('catalog__input-price-min--not-active');
+  }
+});
+
+$('.catalog__input-price-max').change(function() {
+  if($(this).hasClass('catalog__input-price-max--not-active')) {
+    $(this).removeClass('catalog__input-price-max--not-active');
+  }
 });
 
 // select на стра каталога
@@ -256,11 +284,11 @@ $('.product-item__dscr-btn--characteristic').click(function() {
   $(this).addClass('.product-item__dscr-btn--active');
   $('.product-item__dscr').fadeOut(0)
   $('#characteristic').fadeIn(0);
-})
+});
 
 $('.product-item__dscr-btn--documents').click(function() {
   $('.product-item__dscr-btn').removeClass('product-item__dscr-btn--dscr');
   $(this).addClass('.product-item__dscr-btn--active');
   $('.product-item__dscr').fadeOut(0)
   $('#documents').fadeIn(0);
-})
+});
