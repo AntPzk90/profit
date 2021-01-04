@@ -4,11 +4,12 @@ $('.header__catalog-btn--clicked').click(function () {
     if ($('.overlay').length > 0) {
       $('.overlay').remove();
     } else {
-      $('body').append("<div class='overlay'></div>");
+      $('body').append("<div class='overlay'></div>").css('overflow', 'hidden');
       $('.overlay').css('top', $('.header').height())
       $('.overlay').click(function () {
         $('.header__catalog-list').fadeToggle(0);
         $(this).remove();
+        $('body').removeAttr('style');
       });
     }
   }
@@ -258,7 +259,7 @@ $('.product-item__rate-btn').click(function() {
   }
 });
 
-//увеличение счетчика
+//увеличение счетчика стр опиания товара
 
 let Counter = {
   count: 0,
@@ -306,4 +307,88 @@ $('.product-item__dscr-btn--documents').click(function() {
   $(this).addClass('product-item__dscr-btn--active');
   $('.product-item__dscr').fadeOut(0)
   $('#documents').fadeIn(0);
+});
+
+// увеличение счётчика корзина
+
+let minus = $('.cart__product-count-btn--minus');
+let plus = $('.cart__product-count-btn--plus');
+
+let CartCounter = {
+  count: 0,
+  plusHandler: function(container) {
+    this.count ++;
+    container.val(this.count);
+  },
+  minusHandler: function(container) {
+    this.count--;
+    if(this.count <= 0) {
+      this.count = 0;
+    }
+    container.val(this.count);
+  }
+}
+
+function addSpace(str) {
+  return str.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+}
+
+minus.click(function() {
+  CartCounter.count = $(this).parent().find('.cart__product-count-input').val();
+  CartCounter.minusHandler($(this).parent().find('.cart__product-count-input'));
+  let price = parseInt($(this).parent().next().find('.cart__product-price-item').text().trim().split(' ').join(''));
+  let totalPriceItems = price * CartCounter.count;
+  $(this).parent().next().find('.cart__product-price-total').text(addSpace(totalPriceItems.toString()));
+  calculateTotalPrice();
+});
+
+plus.click(function() {
+  CartCounter.count = $(this).parent().find('.cart__product-count-input').val()
+  CartCounter.plusHandler($(this).parent().find('.cart__product-count-input'));
+  let price = parseInt($(this).parent().next().find('.cart__product-price-item').text().trim().split(' ').join(''));
+  let totalPriceItems = price * CartCounter.count;
+  $(this).parent().next().find('.cart__product-price-total').text(addSpace(totalPriceItems.toString()));
+  calculateTotalPrice();
+});
+
+let calculateTotalPrice = function() {
+  let totalPrice = 0;
+  $('.cart__product-price-total').each(function() {
+    totalPrice += parseInt($(this).text().trim().split(' ').join(''));
+  });
+  $('.cart__price-total-input').val(addSpace(totalPrice.toString()));
+}
+
+$(document).ready(function() {
+  if($('.cart').length > 0) {
+    calculateTotalPrice();
+    // удалить для натяжки
+    $('body').append("<div class='overlay'></div>").css('overflow', 'hidden');
+    $('.overlay').css('top', $('.header').height());
+    $('.overlay').click(function () {
+      $('.cart__popup').fadeOut(0);
+      $('.cart__popup--confirm').fadeOut(0);
+      $(this).remove();
+      $('body').removeAttr('style');
+    });
+  }
+});
+
+$('.cart__submit').click(function(evt) {
+  evt.preventDefault();
+  $('.cart__popup:not(.cart__popup--confirm)').fadeIn(0);
+  $('body').append("<div class='overlay'></div>").css('overflow', 'hidden');
+  $('.overlay').css('top', 0)
+  $('.overlay').click(function () {
+    $('.cart__popup').fadeOut(0);
+    $('.cart__popup--confirm').fadeOut(0);
+    $(this).remove();
+    $('body').removeAttr('style');
+  });
+});
+
+$('.cart__popup-close').click(function() {
+  $(this).parent().fadeOut(0);
+  $('.overlay').remove();
+  $('body').removeAttr('style');
 });

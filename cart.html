@@ -220,7 +220,7 @@
                 <div class="cart__product-column">
                   <div class="cart__product-count-wrapper">
                     <button type="button" class="cart__product-count-btn cart__product-count-btn--minus">+</button>
-                    <input type="text" class="cart__product-count-input" value="0">
+                    <input type="text" class="cart__product-count-input" value="1">
                     <button type="button" class="cart__product-count-btn cart__product-count-btn--plus">-</button>
                   </div>
                   <div class="cart__product-price">
@@ -247,7 +247,7 @@
                 <div class="cart__product-column">
                   <div class="cart__product-count-wrapper">
                     <button type="button" class="cart__product-count-btn cart__product-count-btn--minus"></button>
-                    <input type="text" class="cart__product-count-input" value="0">
+                    <input type="text" class="cart__product-count-input" value="1">
                     <button type="button" class="cart__product-count-btn cart__product-count-btn--plus"></button>
                   </div>
                   <div class="cart__product-price">
@@ -266,7 +266,7 @@
                 Итого товары на сумму:
               </p>
               <p class="cart__price-total-input-wrapper">
-                <input class="cart__price-total-input" readonly="readonly" value="417000">
+                <input class="cart__price-total-input" readonly="readonly" value="417 000">
               </p>
             </div>
           </div>
@@ -316,6 +316,65 @@
             </div>
           </div>
         </from>
+      </div>
+      <div class="cart__popup">
+        <button class="cart__popup-close"></button>
+        <b class="cart__popup-sub-title">Способ оплаты</b>
+        <p class="cart__popup-txt">
+          Заказ еще не оформлен. Нужно выбрать систему оплаты чтобы оформить заказ.
+        </p>
+        <form class="cart__popup-from">
+          <label class="cart__user-data-label">
+            <span>Плательщик <sup>*</sup></span>
+            <input class="cart__user-data-input" type="text">
+          </label>
+          <label class="cart__user-data-label">
+            <span>ИНН плательщика<sup>*</sup></span>
+            <input class="cart__user-data-input" type="text">
+          </label>
+          <label class="cart__user-data-label">
+            <span>Номер л/счета плательщика<sup>*</sup></span>
+            <input class="cart__user-data-input" type="text">
+          </label>
+          <button type="submit" class="cart__popup-submit btn">Продолжить</button>
+        </form>
+      </div>
+      <div class="cart__popup cart__popup--confirm">
+        <button class="cart__popup-close"></button>
+        <b class="cart__popup-sub-title">Спасибо за заказ</b>
+        <p class="cart__popup-txt">
+          Ваш заказ принят. Спасибо за сотрудничество!
+        </p>
+        <p class="cart__popup-conf-txt">
+          <span class="cart__popup-conf-span">
+            Номер Вашего заказа
+          </span>
+          <b class="cart__popup-conf-bold">
+            № 711 (468825301)
+          </b>
+        </p>
+        <p class="cart__popup-conf-txt">
+          <span class="cart__popup-conf-span">
+            Дата заказа
+          </span>
+          <b class="cart__popup-conf-bold">
+            03.12.20 10:22
+          </b>
+        </p>
+        <p class="cart__popup-conf-txt">
+          <span class="cart__popup-conf-span">
+            Сумма к оплате
+          </span>
+          <b class="cart__popup-conf-bold">
+            7 758 ₽
+          </b>
+        </p>
+        <p class="cart__popup-conf-status">
+          Проверить статус заказа Вы можете по <a href="#" class="cart__popup-conf-status-link">ссылке</a>
+        </p>
+        <a hrfe="#" class="cart__popup-conf-download-link btn">
+          Распечатать бланк заказа
+        </a>
       </div>
     </section>
     <section class="novelty-products novelty-products--inner novelty-products--inner-white novelty-products--inner-cart">
