@@ -129,6 +129,9 @@ if ($(window).width() <= 576) {
     $('.header__bottom').fadeIn(0);
     $('.header__nav-list').fadeIn(0);
     $('.header__rev-tel').fadeIn(0);
+    //==
+    $('.header__search-pop-up').fadeOut(0);
+    //==
   });
 
   $('.mobile-menu__link--search').click(function() {
@@ -147,8 +150,9 @@ if ($(window).width() <= 576) {
     $('.header__bottom').fadeIn(0);
     $('.header__catalog-list').addClass('header__catalog-list--show-mobile');
     $('.header__catalog-wrapper').css('display', ' block');
-    $('.header__nav-list').fadeOut(0)
-    $('.header__rev-tel').fadeOut(0)
+    $('.header__nav-list').fadeOut(0);
+    $('.header__rev-tel').fadeOut(0);
+    $('.header__search-pop-up').fadeOut(0);
   });
 
   $('.header__catalog-close').click(function () {
@@ -222,6 +226,12 @@ if ($('.sort__select').length > 0) {
 
     $('.sort__select--brend').select2({
       placeholder: 'Бренд',
+      minimumResultsForSearch: -1,
+    });
+
+    // страница бренды
+    $('.sort__select--brends').select2({
+      placeholder: 'От А до Я',
       minimumResultsForSearch: -1,
     });
   });
@@ -392,3 +402,24 @@ $('.cart__popup-close').click(function() {
   $('.overlay').remove();
   $('body').removeAttr('style');
 });
+
+// бренды работа с карточками
+
+if (window.matchMedia('(min-width: 1200px)').matches) {
+  $('.brends__item').mouseenter(function() {
+    $(this).find('.brends__dscr').fadeIn(0);
+  });
+  $('.brends__item').mouseleave(function() {
+    $(this).find('.brends__dscr').fadeOut(0);
+  });
+} else {
+  $('.brends__item').click(function(evt) {
+    let target = $(evt.target);
+    console.log(target)
+    if (target.hasClass('brends__item') || target.hasClass('brends__img')) {
+      $(this).find('.brends__dscr').fadeIn(0);
+    } else if (target.hasClass('brends__dscr-close')) {
+      $('.brends__dscr').removeAttr('style');
+    }
+  });
+}
